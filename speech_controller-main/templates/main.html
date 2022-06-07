@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <uses-permission android:name="android.permission.RECORD_AUDIO" />
+  <title>Распознавание голоса и чтение текста</title>
+  <script type="text/javascript">
+  	normalstyle = "width: 100%; height: 100%;"
+  	invertstyle = "width: 100%; height: 100%; filter: contrast(0);"
+  	function switch_lamp(status){
+  		var fan = document.querySelectorAll('img')[0]
+  		if (status == 1){
+  			fan.setAttribute("style", normalstyle);
+  		} else {
+  			fan.setAttribute("style", invertstyle);
+  		}
+  	}
+  	function switch_fan(status){
+  		var fan = document.querySelectorAll('img')[1]
+  		if (status == 1){
+  			fan.setAttribute("style", normalstyle);
+  		} else {
+  			fan.setAttribute("style", invertstyle);
+  		}
+  	}
+  </script>
+  <script type="text/javascript" src="script.js" allow="microphone;">
+  </script>
+</head>
+<body>
+	<table style="width: 100%; height: 100%; left: 0; position: fixed;">
+		<tr style="height: 20%;">
+			<td><button onclick="speech()" style="width: 100%; height: 100%;"></button></td>
+		</tr>
+
+
+	</table>
+</body>
+</html>
